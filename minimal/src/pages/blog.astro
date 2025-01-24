@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Mi Blog en Astro";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <p>
+    Aqui es donde publicaré mi progreso en Astro
+
+    <ul>
+      <li><a href="/posts/post-1/">Introducción a Astro</a></li>
+      <li><a href="/posts/post-2/">Post 2</a></li>
+      <li><a href="/posts/post-3/">Post 3</a></li>
+    </ul>
+  </p>
+</BaseLayout>

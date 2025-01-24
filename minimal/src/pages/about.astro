@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Acerca de mi";
+
+const identity = {
+  name: "Jesús Alejandro",
+  lastName: "Valdés Viramontes",
+  country: "México",
+  occupation: "Desarrollador Frontend",
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Node.js", "Astro"];
+
+const happy = true;
+const finished = false;
+const goalDays = 3;
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h3>Un poco sobre mí:</h3>
+  <p>
+    Mi nombre es {identity.name}
+    {identity.lastName}, estoy trabajando en el tutorial de <a
+      href="https://docs.astro.build/en/tutorial/0-introduction/"
+      >introducción de Astro</a
+    > sobre como construir un blog. Vivo actualmente en {identity.country} y trabajo
+    como {identity.occupation}.
+  </p>
+  <h3>
+    Algunas de mis habilidades o competencias que poseo actualmente son:
+    <ul>{skills.map((s) => <li class="skills">{s}</li>)}</ul>
+  </h3>
+  <p>Esta página se ira actualizando conforme avance el tutorial</p>
+
+  {happy && <p>Estoy feliz de aprender Astro y progresar como programador</p>}
+  {finished && <p>He finalizado el curso de Astro</p>}
+  {goalDays && <p>Espero terminar el tutorial en {goalDays} días</p>}
+</BaseLayout>
