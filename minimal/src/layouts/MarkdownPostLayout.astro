@@ -18,10 +18,21 @@ const { frontmatter } = Astro.props;
     }
   </div>
 
+  <picture>
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+  </picture>
   <slot />
 </BaseLayout>
 
 <style>
+  picture {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    width: 500px;
+    margin-bottom: 2rem;
+  }
   a {
     color: #00539f;
   }
@@ -30,6 +41,7 @@ const { frontmatter } = Astro.props;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-block: 2rem;
   }
 
   .tag {
