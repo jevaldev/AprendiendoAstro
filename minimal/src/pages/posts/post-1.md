@@ -1,17 +1,14 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "Mi primer blog"
-pubDate: 2025-22-01
+pubDate: 2025-01-22
 description: "Este es el primer blog que creo con Astro y el lenguaje de marcado markdown."
-author: "Jesús Alejandro Valdés Viramontes"
+author: "Jesus Alejandro Valdes Viramontes"
 image:
   url: "https://docs.astro.build/assets/rose.webp"
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["astro", "blog", "aprendiendo", "primeros pasos"]
 ---
-
-# Mi primer blog
-
-Publicado el: 22 de Enero de 2025
 
 Bienvenidos a mi _blog_ en donde ire publicando cosas relacionadas a mi progreso aprendiendo a programar con Astro
 
