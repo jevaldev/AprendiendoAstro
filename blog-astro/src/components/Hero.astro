@@ -1,0 +1,60 @@
+---
+import personsvg from "../assets/personwriting.svg";
+---
+
+<div>
+  <section>
+    <aside>
+      <h1>¡Bienvenido! al blog personal de Jesús Valdés</h1>
+      <p>
+        En las publicaciones hablaré de lo que he aprendido e ire aprendiendo.
+        No solo sobre desarrollo de software, si no más allá de mi vida como
+        programador.
+      </p>
+      <button><a href="">VISITA MI GITHUB</a></button>
+    </aside>
+    <img src={personsvg.src} alt="" />
+  </section>
+</div>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 80svh;
+    margin: auto;
+  }
+  h1 {
+    font-size: 2.5rem;
+    color: #1d3557;
+    font-weight: 700;
+    line-height: 115%;
+    margin-block: 1rem;
+  }
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: start;
+    margin: auto;
+    gap: 3rem;
+
+    aside {
+      max-width: 60ch;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #457b9d;
+      font-weight: 500;
+      margin-block: 1rem;
+    }
+
+    img {
+      width: 400px;
+      aspect-ratio: 1/1;
+    }
+  }
+</style>
