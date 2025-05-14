@@ -1,3 +1,96 @@
 ---
-
+import CardPost from "./CardPost.astro";
 ---
+
+<section class="wave">
+  <header>
+    <h2>Posts más recientes</h2>
+    <a href="">Ver todos los posts publicados -></a>
+  </header>
+  <div class="posts">
+    <CardPost
+      title="Aprender HTML"
+      tags={["Aprender", "Desarrollo web", "HTML"]}
+      image="https://unsplash.com/es/fotos/conjunto-de-mesa-con-ceramica-y-un-arreglo-floral-T3KzToHetcQ"
+      link="/blog-posts/1"
+    />
+    <CardPost
+      title="Aprender CSS"
+      tags={["Aprender", "Desarrollo web", "CSS"]}
+      image="https://unsplash.com/es/fotos/conjunto-de-mesa-con-ceramica-y-un-arreglo-floral-T3KzToHetcQ"
+      link="/blog-posts/2"
+    />
+    <CardPost
+      title="Aprender JavaScript"
+      tags={["Aprender", "Desarrollo web", "JavaScript"]}
+      image="https://unsplash.com/es/fotos/conjunto-de-mesa-con-ceramica-y-un-arreglo-floral-T3KzToHetcQ"
+      link="/blog-posts/3"
+    />
+  </div>
+</section>
+
+<style>
+  .wave svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .wave {
+    background-color: #a8dadc7e;
+    padding-block: 7rem;
+    position: relative;
+  }
+
+  .wave::after,
+  .wave::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: #ffff;
+    -webkit-mask-image: url("../assets/wave.svg");
+    -webkit-mask-size: 100% 100px;
+  }
+
+  .wave::before {
+    top: 0;
+    left: 0;
+    transform: rotate(0.5turn);
+  }
+  .wave::after {
+    bottom: 0;
+    left: 0;
+  }
+  h2 {
+    font-size: 2rem;
+    color: #1d3557;
+    font-weight: 700;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+
+    a {
+      color: #5e5e5e;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #1d3557;
+      text-decoration: underline;
+    }
+  }
+
+  .posts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+</style>

@@ -11,7 +11,7 @@ import personsvg from "../assets/personwriting.svg";
         No solo sobre desarrollo de software, si no más allá de mi vida como
         programador.
       </p>
-      <button><a href="">VISITA MI GITHUB</a></button>
+      <a class="button" href="">VISITA MI GITHUB</a>
     </aside>
     <img src={personsvg.src} alt="" />
   </section>
@@ -42,6 +42,9 @@ import personsvg from "../assets/personwriting.svg";
     gap: 3rem;
 
     aside {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
       max-width: 60ch;
     }
 
@@ -55,6 +58,17 @@ import personsvg from "../assets/personwriting.svg";
     img {
       width: 400px;
       aspect-ratio: 1/1;
+    }
+    .button {
+      background-color: #a8dadc;
+      color: #1d3557;
+      border-radius: 12px;
+      border: none;
+      padding: 1rem 3rem;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.1rem;
+      width: fit-content;
     }
   }
 </style>
