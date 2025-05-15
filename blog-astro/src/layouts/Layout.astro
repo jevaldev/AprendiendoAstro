@@ -45,14 +45,8 @@
     width: min(100% - 2rem, 1200px);
     margin: auto;
   }
-
-  .username {
-    font-size: 2rem;
-    color: #1d3557;
-    font-weight: 700;
-  }
-
-  ul {
+ul {
+    padding: 0;
     display: flex;
     list-style: none;
     gap: 2rem;
@@ -64,5 +58,23 @@
     a:hover {
       color: #457b9d;
     }
+  }  
+  
+  .username {
+    font-size: 2rem;
+    color: #1d3557;
+    font-weight: 700;
   }
+
+  @media screen and (max-width: 600px) {
+    header { 
+      ul {
+        gap: 1rem
+      }
+      a {
+      font-size: 1rem;
+    }
+  }
+
+  
 </style>

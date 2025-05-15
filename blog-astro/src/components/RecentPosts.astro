@@ -42,6 +42,7 @@ import CardPost from "./CardPost.astro";
     padding-block: 7rem;
     padding-inline: 1rem;
     position: relative;
+    width: 100%;
   }
 
   .wave::after,
@@ -88,6 +89,16 @@ import CardPost from "./CardPost.astro";
     }
   }
 
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
   @media screen and (max-width: 600px) {
     header {
       flex-direction: column;
@@ -97,14 +108,5 @@ import CardPost from "./CardPost.astro";
     h2 {
       font-size: 1.5rem;
     }
-  }
-  .posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: auto;
   }
 </style>
