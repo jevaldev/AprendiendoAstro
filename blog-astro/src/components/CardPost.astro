@@ -1,20 +1,14 @@
 ---
-
+const { title, tags, image, link } = Astro.props;
 ---
 
 <article class="card">
-  <img
-    src="https://images.unsplash.com/photo-1746311585296-f91039c70a8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8"
-    alt=""
-  />
-  <h3>Aprender HTML</h3>
+  <img src={image} alt="" />
+  <h3>{title}</h3>
   <span>
-    <a href="">Aprender</a>
-    <a href="">Desarrollo web</a>
-    <a href="">HTML</a>
-    <a href="">Prueba</a>
+    {tags.map((tag: String) => <a href="">{tag}</a>)}
   </span>
-  <a class="button" href="">Leer post completo</a>
+  <a class="button" href={link}>Leer post completo</a>
 </article>
 
 <style>
@@ -24,9 +18,9 @@
     flex: 1;
     max-width: 300px;
     margin: auto;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     border-radius: 12px;
-    background-color: #1d3557;
+    background-color: var(--clr-primary);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   }
 
@@ -43,12 +37,15 @@
     display: flex;
     gap: 1rem;
     a {
+      flex-shrink: 0;
+      width: fit-content;
+      height: fit-content;
       text-decoration: none;
       color: #ffff;
       font-size: 0.9rem;
       padding: 0.5rem;
       border-radius: 5px;
-      background-color: #e84c58;
+      background-color: var(--clr-complementary);
     }
   }
 
@@ -58,7 +55,7 @@
   }
 
   .button {
-    background-color: #f1faee;
+    background-color: var(--clr-neutral);
     border-radius: 12px;
     border: none;
     margin-top: 2.5rem;
@@ -68,7 +65,7 @@
     text-transform: capitalize;
     font-weight: 700;
     text-decoration: none;
-    color: #1d3557;
+    color: var(--clr-primary);
     text-align: center;
   }
 </style>

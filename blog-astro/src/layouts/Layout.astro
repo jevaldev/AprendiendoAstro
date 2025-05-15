@@ -23,12 +23,18 @@
 </html>
 
 <style>
+  :root {
+    --clr-primary: #1d3557;
+    --clr-secondary: #457b9d;
+    --clr-tertiary: #a8dadc;
+    --clr-complementary: #e84c58;
+    --clr-neutral: #f1faee;
+  }
   html,
   body {
     font-family: poppins, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100%;
     margin: auto;
   }
 
@@ -36,7 +42,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    width: min(100% - 2rem, 1200px);
     margin: auto;
   }
 
