@@ -40,7 +40,6 @@ import CardPost from "./CardPost.astro";
     flex: 1;
     background-color: var(--clr-tertiary);
     padding-block: 7rem;
-    padding-inline: 1rem;
     position: relative;
     width: 100%;
   }
@@ -69,6 +68,7 @@ import CardPost from "./CardPost.astro";
     font-size: 2rem;
     color: var(--clr-primary);
     font-weight: 700;
+    margin: 0;
   }
 
   header {
@@ -77,6 +77,8 @@ import CardPost from "./CardPost.astro";
     align-items: center;
     max-width: 1200px;
     margin: auto;
+    padding-inline: 1rem;
+    gap: 0.5rem;
 
     a {
       flex-shrink: 0;
@@ -103,7 +105,7 @@ import CardPost from "./CardPost.astro";
     header {
       flex-direction: column;
       align-items: flex-start;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
     h2 {
       font-size: 1.5rem;
