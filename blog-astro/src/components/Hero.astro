@@ -73,8 +73,16 @@ import personsvg from "../assets/personwriting.svg";
       font-weight: 700;
       text-decoration: none;
       font-size: 1.1rem;
+      transition: all 0.3s ease;
       width: fit-content;
     }
+  }
+
+  .button:hover {
+    background-color: var(--clr-secondary);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 6px var(--clr-primary);
   }
 
   @media screen and (max-width: 600px) {
